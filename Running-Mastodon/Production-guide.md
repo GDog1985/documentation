@@ -56,7 +56,7 @@ We run this script to add the repository:
 
 ```sh
 apt -y install curl
-curl -sL https://deb.nodesource.com/setup_6.x | bash -
+curl -sL https://deb.nodesource.com/setup_7.x | bash -
 ```
 
 The [node.js](https://nodejs.org/en/) repository is now added.
@@ -148,6 +148,7 @@ cd ~
 git clone https://github.com/tootsuite/mastodon.git live
 # Change directory to ~live
 cd ~/live
+# 
 # Checkout to the latest stable branch
 git checkout $(git tag -l | grep -v 'rc[0-9]*$' | sort -V | tail -n 1)
 # Install bundler
@@ -242,7 +243,7 @@ server {
     add_header Cache-Control "public, max-age=31536000, immutable";
     try_files $uri @proxy;
   }
-  
+
   location /sw.js {
     add_header Cache-Control "public, max-age=0";
     try_files $uri @proxy;
