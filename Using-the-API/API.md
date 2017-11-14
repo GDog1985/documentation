@@ -95,6 +95,8 @@ Form data:
 | `avatar`       | An avatar for the user                    | yes        |
 | `header`       | A header image for the user               | yes        |
 
+Returns the authenticated user's [Account](#account).
+
 #### Getting an account's followers:
 
     GET /api/v1/accounts/:id/followers
@@ -531,7 +533,9 @@ Returns an empty object.
     POST /api/v1/statuses/:id/reblog
     POST /api/v1/statuses/:id/unreblog
 
-Returns the target [Status](#status).
+Reblog: Returns the reblog [Status](#status).
+
+Unreblog: Returns the target [Status](#status).
 
 #### Favouriting/unfavouriting a status:
 
